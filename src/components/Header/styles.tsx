@@ -47,7 +47,7 @@ export const NavButton = styled.button`
   align-items: flex-start;
   gap: 10px;
   color: var(--Black, #000);
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -113,7 +113,7 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.h2`
   color: var(--Black, #000);
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
