@@ -1,3 +1,4 @@
+import AboutUs from './components/AboutUs'
 import BenefitsSection from './components/BenefitsSection'
 import Header from './components/Header/Header'
 import HeroSection from './components/HeroSection'
@@ -8,7 +9,8 @@ function App() {
     <>
       <Header/>
       <HeroSection/>
-      <BenefitsSection/>
+      <BenefitsSection />
+      <AboutUs />
     </>
   )
 }

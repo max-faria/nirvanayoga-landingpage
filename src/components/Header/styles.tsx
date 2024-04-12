@@ -96,12 +96,25 @@ export const TextHero = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0px 60px;
+  gap: 15px;
 `;
+
+export const ImgContainer = styled.div`
+  display: flex;
+  
+
+`
 
 export const ImgHero = styled.img`
   flex: 1;
   height: 100%;
 `;
+
+export const ImgAboutUs = styled.img`
+  flex: 1;
+  height: 640px;
+  padding-right: 64px;
+`
 export const Title = styled.h1`
   color: var(--Black, #000);
   font-family: Roboto;
@@ -111,7 +124,16 @@ export const Title = styled.h1`
   line-height: 120%; /* 67.2px */
 `;
 
-export const Subtitle = styled.h2`
+export const TitleSecondary = styled.h2`
+  color: var(--Black, #000);
+  font-family: Roboto;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 67.2px */
+`;
+
+export const Subtitle = styled.div`
   color: var(--Black, #000);
   font-family: Roboto, sans-serif;
   font-size: 18px;
