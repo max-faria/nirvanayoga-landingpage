@@ -2,6 +2,7 @@ import AboutUs from './components/AboutUs'
 import BenefitsSection from './components/BenefitsSection'
 import Header from './components/Header/Header'
 import HeroSection from './components/HeroSection'
+import YogaClasses from './components/YogaClasses'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <HeroSection/>
       <BenefitsSection />
       <AboutUs />
+      <YogaClasses/>
     </>
   )
 }

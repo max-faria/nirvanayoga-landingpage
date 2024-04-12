@@ -101,9 +101,7 @@ export const TextHero = styled.div`
 
 export const ImgContainer = styled.div`
   display: flex;
-  
-
-`
+`;
 
 export const ImgHero = styled.img`
   flex: 1;
@@ -114,7 +112,7 @@ export const ImgAboutUs = styled.img`
   flex: 1;
   height: 640px;
   padding-right: 64px;
-`
+`;
 export const Title = styled.h1`
   color: var(--Black, #000);
   font-family: Roboto;
@@ -127,7 +125,7 @@ export const Title = styled.h1`
 export const TitleSecondary = styled.h2`
   color: var(--Black, #000);
   font-family: Roboto;
-  font-size: 56px;
+  font-size: 45px;
   font-style: normal;
   font-weight: 700;
   line-height: 120%; /* 67.2px */
@@ -139,6 +137,14 @@ export const Subtitle = styled.div`
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; 
+  line-height: 150%;
   margin-bottom: 40px;
+`;
+
+export const ContainerCenter = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 112px 0px;
 `;
