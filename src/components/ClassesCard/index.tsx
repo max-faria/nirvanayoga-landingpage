@@ -2,31 +2,41 @@ import {
   CardContainer,
   CardImg,
   CardTitle,
+  ImgCardContainer,
   InformationContainer,
   TextDescriptionCard,
 } from "./styles";
-import GroupPractice from "../../assets/group-practice.png";
 import { LoginButton } from "../Header/styles";
 import { Clock, Ranking } from "@phosphor-icons/react";
 
-const ClassesCard = () => {
+interface CardInterface {
+  img: string;
+  title: string;
+  level: string;
+  duration: string;
+  description: string;
+  column: string;
+}
+
+const ClassesCard: React.FC<CardInterface> = (props) => {
   return (
-    <CardContainer>
-      <CardImg src={GroupPractice} />
-      <CardTitle>Vinyasa Yoga</CardTitle>
-      <InformationContainer>
-        <Ranking size={20} />
-        <p>Level 2</p>
-      </InformationContainer>
-      <InformationContainer>
-        <Clock size={20} />
-        <p>45 min</p>
-      </InformationContainer>
-      <TextDescriptionCard>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        varius enim in eros elementum tristique.
-      </TextDescriptionCard>
-      <LoginButton>Book now</LoginButton>
+    <CardContainer column={props.column}>
+      <CardTitle>{props.title}</CardTitle>
+      <ImgCardContainer>
+        <CardImg src={props.img} />
+      </ImgCardContainer>
+      <div style={{ padding: '10px'}}>
+        <InformationContainer>
+          <Ranking size={20} />
+          <p>{props.level}</p>
+        </InformationContainer>
+        <InformationContainer>
+          <Clock size={20} />
+          <p>{props.duration}</p>
+        </InformationContainer>
+        <TextDescriptionCard>{props.description}</TextDescriptionCard>
+        <LoginButton>Learn more</LoginButton>
+      </div>
     </CardContainer>
   );
 };

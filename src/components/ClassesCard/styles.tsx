@@ -1,24 +1,35 @@
 import styled from "styled-components";
 
-export const CardContainer = styled.div`
+interface grid {
+  column: string;
+}
+
+export const CardContainer = styled.div<grid>`
   display: flex;
   flex-direction: column;
   align-items: start;
   max-width: 300px;
   gap: 5px;
   border: 1px solid transparent;
-  border-radius: 20px;
+  border-radius: 3px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  padding-top: 12px;
+  grid-column: ${(props) => (props.column ? props.column : 1)};
+`;
+
+export const ImgCardContainer = styled.div`
+  width: 100%;
+  height: 280px;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 12px;
 `;
 
 export const CardImg = styled.img`
-  max-height: 280px;
-  align-self: stretch;
-  margin-bottom: 12px;
-  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   
-
 `;
 
 export const CardTitle = styled.h3`
@@ -26,9 +37,10 @@ export const CardTitle = styled.h3`
   font-family: Roboto, sans-serif;
   font-size: 25px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 150%; /* 27px */
-  margin-bottom: 18px;
+  margin-bottom: 8px;
+  padding-left: 10px;
 `;
 
 export const InformationContainer = styled.div`
@@ -42,16 +54,23 @@ export const InformationContainer = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    margin-bottom: 8px; 
+    margin-bottom: 8px;
 `;
 
 export const TextDescriptionCard = styled.p`
   color: var(--Black, #000);
   font-family: Roboto;
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 27px */
   max-width: 400px;
   margin-bottom: 20px;
+  height: 80px;
+`;
+
+export const GridClassesSection = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 48px;
 `;

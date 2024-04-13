@@ -146,5 +146,5 @@ export const ContainerCenter = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 112px 0px;
+  padding: 40px 0px;
 `;

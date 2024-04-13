@@ -2,7 +2,7 @@ import styled from "styled-components";
 import img from "../../assets/benefits.png";
 
 interface GridInterface {
-    gridColumn: string,
+    gridcolumn: string,
     gridrow?: string,
 }
 
@@ -34,7 +34,7 @@ export const Grid = styled.div`
 `;
 
 export const CardContent= styled.div<GridInterface>`
-  grid-column: ${props => props.gridColumn};
+  grid-column: ${props => props.gridcolumn};
   grid-row: ${props => props.gridrow? props.gridrow : 1};
   display: flex;
   flex-direction: column;

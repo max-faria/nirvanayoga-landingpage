@@ -21,7 +21,7 @@ const BenefitsSection = () => {
     <Container>
       <Title>Benefits and Outcomes</Title>
       <Grid>
-        <CardContent gridColumn="1">
+        <CardContent gridcolumn="1">
           <ImgCard src={MoonIcon} />
           <TitleCard>Meditation</TitleCard>
           <DescriptionCard>
@@ -30,7 +30,7 @@ const BenefitsSection = () => {
           </DescriptionCard>
           <ButtonCard linkTo="" />
         </CardContent>
-        <CardContent gridColumn="2">
+        <CardContent gridcolumn="2">
           <ImgCard src={ChartIcon} />
           <TitleCard>Weight Loss</TitleCard>
           <DescriptionCard>
@@ -39,7 +39,7 @@ const BenefitsSection = () => {
           </DescriptionCard>
           <ButtonCard linkTo={""} />
         </CardContent>
-        <CardContent gridColumn="1" gridrow="2">
+        <CardContent gridcolumn="1" gridrow="2">
           <ImgCard src={HeartIcon} />
           <TitleCard>Lower Blood Pressure</TitleCard>
           <DescriptionCard>
@@ -48,7 +48,7 @@ const BenefitsSection = () => {
           </DescriptionCard>
           <ButtonCard linkTo="" />
         </CardContent>
-        <CardContent gridColumn="2" gridrow="2">
+        <CardContent gridcolumn="2" gridrow="2">
           <ImgCard src={EmogiIcon} />
           <TitleCard>Increase Flexibility</TitleCard>
           <DescriptionCard>
@@ -57,7 +57,7 @@ const BenefitsSection = () => {
           </DescriptionCard>
           <ButtonCard linkTo="" />
         </CardContent>
-        <CardContent gridColumn="1" gridrow="3">
+        <CardContent gridcolumn="1" gridrow="3">
           <ImgCard src={TriangleIcon} />
           <TitleCard>Balance Your Mind</TitleCard>
           <DescriptionCard>
@@ -66,7 +66,7 @@ const BenefitsSection = () => {
           </DescriptionCard>
           <ButtonCard linkTo="" />
         </CardContent>
-        <CardContent gridColumn="2" gridrow="3">
+        <CardContent gridcolumn="2" gridrow="3">
           <ImgCard src={FlashIcon} />
           <TitleCard>Improve Health</TitleCard>
           <DescriptionCard>
