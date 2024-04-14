@@ -14,7 +14,7 @@ import EmogiIcon from "../../assets/emoji-happy.svg";
 import TriangleIcon from "../../assets/triangle.svg";
 import FlashIcon from '../../assets/flash.svg'
 
-import ButtonCard from "./ButtonCard";
+import ButtonCard from "./components/ButtonCard";
 
 const BenefitsSection = () => {
   return (

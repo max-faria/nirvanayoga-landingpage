@@ -1,5 +1,6 @@
 import {
   ContainerHeroSection,
+  ImgContainer,
   ImgHero,
   LoginButton,
   LoginButtons,
@@ -13,7 +14,7 @@ const HeroSection = () => {
   return (
     <ContainerHeroSection>
       <TextHero>
-        <Title>Join Our Online Yoga Classes</Title>
+        <Title>Join Our Yoga Classes</Title>
         <Subtitle>
           Welcome to a space where your journey to inner peace and physical
           strength begins. Here, each breath opens the door to a new
@@ -28,7 +29,9 @@ const HeroSection = () => {
           <LoginButton>Try free for 7 days</LoginButton>
         </LoginButtons>
       </TextHero>
-      <ImgHero src={HeroPhoto} />
+      <ImgContainer>
+        <ImgHero src={HeroPhoto} />
+      </ImgContainer>
     </ContainerHeroSection>
   );
 };

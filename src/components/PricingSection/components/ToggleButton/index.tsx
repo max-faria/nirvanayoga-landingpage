@@ -3,7 +3,11 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import VinyasaPricesCards from "../VinyasaPrices";
+import VinyasaPricesCards from "../VinyasaPricesCard";
+import AshtangaPricesCard from "../AshtangaPricesCard";
+import { ThemeProvider } from "@mui/material";
+import theme from "../../../../theme";
+import YinPricesCard from "../YinPricesCard";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -46,28 +50,37 @@ const ToggleButtonPrice = () => {
   };
 
   return (
-    <Box sx={{ width: "100%", marginTop: '40px' }}>
-      <Box sx={{ borderBottom: 1, borderColor: "divider", display: 'flex', justifyContent: 'center' }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="basic tabs example"
+    <ThemeProvider theme={theme}>
+      <Box sx={{ width: "100%", marginTop: "40px" }}>
+        <Box
+          sx={{
+            borderBottom: 1,
+            borderColor: "divider",
+            display: "flex",
+            justifyContent: "center",
+          }}
         >
-          <Tab label="Vinyasa Yoga" {...a11yProps(0)} />
-          <Tab label="Ashtanga Yoga" {...a11yProps(1)} />
-          <Tab label="Yin Yoga" {...a11yProps(2)} />
-        </Tabs>
-      </Box>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="basic tabs example"
+          >
+            <Tab label="Vinyasa Yoga" {...a11yProps(0)} />
+            <Tab label="Ashtanga Yoga" {...a11yProps(1)} />
+            <Tab label="Yin Yoga" {...a11yProps(2)} />
+          </Tabs>
+        </Box>
         <CustomTabPanel value={value} index={0}>
           <VinyasaPricesCards />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          Ashtanga Yoga
+          <AshtangaPricesCard />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
-          Yin Yoga
+          <YinPricesCard/>
         </CustomTabPanel>
-    </Box>
+      </Box>
+    </ThemeProvider>
   );
 };
 

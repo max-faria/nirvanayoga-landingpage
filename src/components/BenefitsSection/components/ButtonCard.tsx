@@ -1,4 +1,4 @@
-import { ButtonContainer, ButtonLearnMore } from "./styles";
+import { ButtonContainer, ButtonLearnMore } from "../styles";
 import { CaretRight } from "@phosphor-icons/react";
 
 interface ButtonCardInterface {

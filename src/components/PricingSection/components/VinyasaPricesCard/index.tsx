@@ -1,12 +1,13 @@
 import PriceCard from "../PriceCard"
+import { ResponsiveCardContainer } from "../PriceCard/styles"
 
 const VinyasaPricesCards = () => {
 
     return (
 
-        <div style={{ display: "flex", gap: "4rem", justifyContent: 'center' }}>
+        <ResponsiveCardContainer>
         <PriceCard
-          title="Dual Harmony Series"
+          title="Dual Harmony"
           description="2x a week"
           price="29"
           features={[
@@ -18,9 +19,9 @@ const VinyasaPricesCards = () => {
           ]}
         />
         <PriceCard
-          title="Thrice Essence Flow"
+          title="Essence Flow"
           description="3x a week"
-          price="9"
+          price="39"
           features={[
             { id: 1, content: "Develop your dedication" },
             { id: 2, content: "Feel the benefits faster" },
@@ -29,7 +30,7 @@ const VinyasaPricesCards = () => {
             { id: 5, content: "Cancel anytime" },
           ]}
         />
-        </div>
+        </ResponsiveCardContainer>
     )
 }
 

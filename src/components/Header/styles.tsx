@@ -82,11 +82,16 @@ export const LoginButton = styled.button`
 
 export const ContainerHeroSection = styled.div`
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
   background: var(--White, #fff);
   justify-content: space-between;
+
+  @media (max-width: 430px){
+    flex-direction: column;
+    margin: 20px 0 0 0;
+  }
 `;
 
 export const TextHero = styled.div`
@@ -97,21 +102,49 @@ export const TextHero = styled.div`
   align-items: flex-start;
   padding: 0px 60px;
   gap: 15px;
+
+  @media (max-width: 430px) {
+    margin-bottom: 20px;
+    padding: 16px;
+  }
+
 `;
 
 export const ImgContainer = styled.div`
   display: flex;
+  justify-content: center;
+
+  @media (max-width: 430px) {
+    width: 100%;        
+    max-width: 100vw;  
+    overflow: hidden;
+    
+  }
 `;
+
+
 
 export const ImgHero = styled.img`
   flex: 1;
   height: 100%;
+
+  @media (max-width: 430px){
+    max-width: 100vh;
+    overflow: hidden;
+    height: auto;
+  }
 `;
 
 export const ImgAboutUs = styled.img`
   flex: 1;
-  height: 640px;
+  min-height: 50vh;
   padding-right: 64px;
+
+  @media (max-width: 430px) {
+    width: 100%;    /* Scale to the width of its container */
+    height: auto;
+    padding-right:0;
+  }
 `;
 export const Title = styled.h1`
   color: var(--Black, #000);
@@ -120,6 +153,12 @@ export const Title = styled.h1`
   font-style: normal;
   font-weight: 700;
   line-height: 120%; /* 67.2px */
+
+  @media (max-width: 430px){
+    font-size: 40px;
+    text-align: center;
+    padding: 30px;
+  }
 `;
 
 export const TitleSecondary = styled.h2`
@@ -129,6 +168,15 @@ export const TitleSecondary = styled.h2`
   font-style: normal;
   font-weight: 700;
   line-height: 120%; /* 67.2px */
+
+  @media (max-width: 430px) {
+   font-size: 32px;
+   display: flex;
+   line-wrap: wrap;
+   margin: 0 12px;
+   justify-content: center;
+   text-align: center; 
+  }
 `;
 
 export const Subtitle = styled.div`
@@ -139,6 +187,10 @@ export const Subtitle = styled.div`
   font-weight: 400;
   line-height: 150%;
   margin-bottom: 40px;
+
+  @media (max-width: 430px) {
+    font-size: 14px;
+  }
 `;
 
 export const ContainerCenter = styled.div`

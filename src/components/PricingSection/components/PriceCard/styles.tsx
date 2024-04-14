@@ -114,3 +114,17 @@ export const FeatureContainer = styled.div`
     line-height: 150%; /* 24px */
   }
 `;
+
+export const ResponsiveCardContainer = styled.div`
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  flex-direction: row; 
+
+  @media (max-width: 768px) {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 1rem;
+  }
+
+`;

@@ -16,6 +16,11 @@ export const Container = styled.div`
   align-items: center;
   gap: 32px;
   padding: 112px 64px;
+
+  @media (max-width: 430px) {
+    padding: 16px 0;
+    
+  }
 `;
 export const Title = styled.h2`
   color: #f7f7f7;
@@ -24,6 +29,10 @@ export const Title = styled.h2`
   font-style: normal;
   font-weight: 700;
   line-height: 120%; /* 48px */
+
+  @media (max-width: 430px) {
+    text-align: center;
+  }
 `;
 
 export const Grid = styled.div`
@@ -31,6 +40,11 @@ export const Grid = styled.div`
   grid-template-columns: repeat(2, 1fr)
   column-gap: 24px;  
   row-gap: 37px;
+
+  @media (max-width: 430px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const CardContent= styled.div<GridInterface>`
@@ -41,6 +55,10 @@ export const CardContent= styled.div<GridInterface>`
   gap: 16px;
   align-items: center;
   padding: 0 55px;
+
+  @media (max-width: 430px) {
+    padding: 10px;
+  }
 `;
 
 export const CardContentB = styled.div`
@@ -67,6 +85,10 @@ export const TitleCard = styled.h3`
   font-weight: 700;
   line-height: 140%; /* 33.6px */
   margin: 0;
+
+  @media (max-width: 430px) {
+    font-size: 18px;
+  }
 `;
 
 export const DescriptionCard = styled.div`
@@ -76,7 +98,11 @@ export const DescriptionCard = styled.div`
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
+
+  @media (max-width: 430px) {
+    font-size: 14px;
+  }
 `;
 
 export const ButtonContainer = styled.div`

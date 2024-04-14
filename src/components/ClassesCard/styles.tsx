@@ -73,4 +73,10 @@ export const GridClassesSection = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 48px;
+
+  @media (max-width: 375px){
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
 `;
