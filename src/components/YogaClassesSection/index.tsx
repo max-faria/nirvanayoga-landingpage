@@ -5,6 +5,9 @@ import VinyasaYoga from "../../assets/vinyasa-yoga.jpeg";
 import AshtangaYoga from "../../assets/ashtanga-yoga.jpeg";
 import YinYoga from "../../assets/yin-yoga.jpeg";
 import { GridClassesSection } from "./ClassesCard/styles";
+import VinyasaPopupContent from "./ClassesCard/PopupContent/VinyasaPopupContent";
+import AshtangaPopupContent from "./ClassesCard/PopupContent/AshtangaPopupContent";
+import YinPopupContent from "./ClassesCard/PopupContent/YinPopupContent";
 
 const YogaClasses = () => {
   return (
@@ -21,6 +24,7 @@ const YogaClasses = () => {
           level="Level 1"
           duration="60 min"
           description="Vinyasa Yoga, often referred to as 'flow' yoga, emphasizes the seamless transition between poses, coordinated with the breath."
+          content={<VinyasaPopupContent/>}
         />
         <ClassesCard
           column="2"
@@ -29,6 +33,7 @@ const YogaClasses = () => {
           level="Level 2"
           duration="90 min"
           description="A highly structured and intense form of yoga that involves a specific sequence of postures, each held for a set amount of time and linked by breath."
+          content={<AshtangaPopupContent/>}
         />
 
         <ClassesCard
@@ -38,6 +43,7 @@ const YogaClasses = () => {
           level="Level 1"
           duration="45 min"
           description="Yin Yoga is a slower, more meditative approach to yoga, where poses are held for longer periods, typically 3 to 5 minutes."
+          content={<YinPopupContent/>}
         />
       </GridClassesSection>
     </ContainerCenter>

@@ -10,6 +10,7 @@ import { LoginButton } from "../../Header/styles";
 import { Clock, Ranking } from "@phosphor-icons/react";
 import { useState } from "react";
 import PopupComponent from "../PopupComponent";
+// import PopupContent from "./PopupContent/VinyasaPopupContent";
 
 interface CardInterface {
   img: string;
@@ -18,10 +19,12 @@ interface CardInterface {
   duration: string;
   description: string;
   column: string;
+  content: React.ReactNode;
 }
 
 const ClassesCard: React.FC<CardInterface> = (props) => {
   const [isPopupOpen, setPopupOpen] = useState(false);
+
 
   const togglePopup = () => {
     setPopupOpen(!isPopupOpen);
@@ -45,7 +48,7 @@ const ClassesCard: React.FC<CardInterface> = (props) => {
         <TextDescriptionCard>{props.description}</TextDescriptionCard>
         <LoginButton onClick={togglePopup} >Learn more</LoginButton>
       </div>
-      {isPopupOpen && <PopupComponent content="Here is more detailed information about the class." onClose={togglePopup} />}
+      {isPopupOpen && <PopupComponent content={props.content} onClose={togglePopup}/>}
     </CardContainer>
   );
 };
