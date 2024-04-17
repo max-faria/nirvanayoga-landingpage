@@ -6,8 +6,10 @@ import {
   InformationContainer,
   TextDescriptionCard,
 } from "./styles";
-import { LoginButton } from "../Header/styles";
+import { LoginButton } from "../../Header/styles";
 import { Clock, Ranking } from "@phosphor-icons/react";
+import { useState } from "react";
+import PopupComponent from "../PopupComponent";
 
 interface CardInterface {
   img: string;
@@ -19,6 +21,12 @@ interface CardInterface {
 }
 
 const ClassesCard: React.FC<CardInterface> = (props) => {
+  const [isPopupOpen, setPopupOpen] = useState(false);
+
+  const togglePopup = () => {
+    setPopupOpen(!isPopupOpen);
+  };
+
   return (
     <CardContainer column={props.column}>
       <CardTitle>{props.title}</CardTitle>
@@ -35,8 +43,9 @@ const ClassesCard: React.FC<CardInterface> = (props) => {
           <p>{props.duration}</p>
         </InformationContainer>
         <TextDescriptionCard>{props.description}</TextDescriptionCard>
-        <LoginButton>Learn more</LoginButton>
+        <LoginButton onClick={togglePopup} >Learn more</LoginButton>
       </div>
+      {isPopupOpen && <PopupComponent content="Here is more detailed information about the class." onClose={togglePopup} />}
     </CardContainer>
   );
 };

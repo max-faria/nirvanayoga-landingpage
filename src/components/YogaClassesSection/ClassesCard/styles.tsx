@@ -72,7 +72,7 @@ export const TextDescriptionCard = styled.p`
 export const GridClassesSection = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 48px;
+  column-gap: 4rem;
 
   @media (max-width: 375px){
     display: flex;

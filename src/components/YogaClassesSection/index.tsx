@@ -1,10 +1,10 @@
-import ClassesCard from "../ClassesCard";
+import ClassesCard from "./ClassesCard";
 import { ContainerCenter, Subtitle, TitleSecondary } from "../Header/styles";
 
 import VinyasaYoga from "../../assets/vinyasa-yoga.jpeg";
 import AshtangaYoga from "../../assets/ashtanga-yoga.jpeg";
 import YinYoga from "../../assets/yin-yoga.jpeg";
-import { GridClassesSection } from "../ClassesCard/styles";
+import { GridClassesSection } from "./ClassesCard/styles";
 
 const YogaClasses = () => {
   return (
