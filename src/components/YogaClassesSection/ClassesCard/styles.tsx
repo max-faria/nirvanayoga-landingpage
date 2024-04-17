@@ -74,7 +74,7 @@ export const GridClassesSection = styled.div`
   grid-template-columns: repeat(3, 1fr);
   column-gap: 4rem;
 
-  @media (max-width: 375px){
+  @media (max-width: 430px){
     display: flex;
     flex-direction: column;
     gap: 3rem;

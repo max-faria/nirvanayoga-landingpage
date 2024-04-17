@@ -1,8 +1,36 @@
 import styled from "styled-components";
 
+interface MobileMenuInterface{
+  isOpen: boolean,
+}
+
 export const Container = styled.div`
   max-width: 1280px;
 `;
+
+export const MobileMenuIcon = styled.div`
+  display: none; /* Hidden on larger screens by default */
+
+  @media (max-width: 768px) {
+    display: block; /* Show hamburger icon on mobile devices */
+    cursor: pointer;
+  }
+`;
+
+export const MobileMenu = styled.div<MobileMenuInterface>`
+  display: ${props => props.isOpen ? 'flex' : 'none'};
+  flex-direction: column;
+  position: absolute;
+  top: 72px; /* Directly below the navbar */
+  left: 0;
+  width: 100%;
+  background: white;
+  border-top: 1px solid var(--Kuno-Grey, #676767);
+  z-index: 20;
+  gap: 8px;
+  align-items: center;
+`;
+
 
 export const NavigationBar = styled.nav`
   display: flex;
@@ -10,8 +38,12 @@ export const NavigationBar = styled.nav`
   padding: 0px 64px 0px 64px;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--Kuno-Grey, #676767);
+  border-bottom: 1px solid #676767;
   background: var(--White, #fff);
+
+  @media (max-width: 768px) {
+    padding: 0 10px; /* Even smaller padding for mobile devices */
+  }
 `;
 
 export const LogoContainer = styled.div`
@@ -29,16 +61,32 @@ export const Logo = styled.img`
 
 export const NavButtonsContainer = styled.div`
   display: flex;
+
+  @media (max-width: 768px) {
+    display: none;  
+  }
 `;
 export const SectionButtons = styled.div`
   display: flex;
   gap: 16px;
   margin-right: 24px;
+
+  @media (max-width: 768px){
+    flex-direction: column;
+    margin-right: 0px;
+    gap: 6px;
+    padding-top: 12px;
+  }
 `;
 
 export const LoginButtons = styled.div`
   display: flex;
   gap: 16px;
+
+  @media (max-width: 768px){
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const NavButton = styled.button`
@@ -55,6 +103,12 @@ export const NavButton = styled.button`
   background-color: #fff;
   border: none;
   cursor: pointer;
+
+  @media (max-width: 768px){
+    padding: 0;
+    justify-content: center;
+    font-size: 18px;
+  }
 `;
 
 export const LoginButton = styled.button`
@@ -78,6 +132,10 @@ export const LoginButton = styled.button`
     background: #000;
     color: #fff;
   }
+
+  @media (max-width: 768px){
+    width: 100%;
+  }
 `;
 
 export const ContainerHeroSection = styled.div`
@@ -90,7 +148,7 @@ export const ContainerHeroSection = styled.div`
 
   @media (max-width: 430px){
     flex-direction: column;
-    margin: 20px 0 0 0;
+    
   }
 `;
 
@@ -104,7 +162,6 @@ export const TextHero = styled.div`
   gap: 15px;
 
   @media (max-width: 430px) {
-    margin-bottom: 20px;
     padding: 16px;
   }
 
@@ -157,7 +214,8 @@ export const Title = styled.h1`
   @media (max-width: 430px){
     font-size: 40px;
     text-align: center;
-    padding: 30px;
+    padding: 0px;
+    line-height: 100%;
   }
 `;
 
