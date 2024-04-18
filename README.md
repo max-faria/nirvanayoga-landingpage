@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# Nirvana Yoga LandingPage
+# Miles Journey 
+![Static Badge](https://img.shields.io/badge/status-finalized-success)
+![Static Badge](https://img.shields.io/badge/React-green)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Webpage for a yoga school using React and Styled Components
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Technologies used
 
-## Expanding the ESLint configuration
+[![My Skills](https://skillicons.dev/icons?i=ts,react,styledcomponents,aws,figma)](https://skillicons.dev)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Author and Acknowledgments
 
-- Configure the top-level `parserOptions` property like this:
+<a>
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/127763619?s=400&u=e41acd5947731c4604b1b0fd518426939e6bfdf8&v=4" width="100px;" alt="Max Faria"/>
+ <sub><b> Made with ❤️ and sweat by Max Faria 👋🏽 Get in touch!</b></sub></a> <a></a>
+ <br />
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+[![Linkedin Badge](https://img.shields.io/badge/-Max-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/max-faria-b212801ba/)
+[![Gmail Badge](https://img.shields.io/badge/-mxxfaria@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mxxfaria@gmail.com)](mailto:mxxfaria@gmail.com)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
