@@ -33,7 +33,7 @@ export const Container = styled.div`
 export const MobileMenuIcon = styled.div`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 896px) {
     display: block;
     cursor: pointer;
   }
@@ -63,7 +63,7 @@ export const NavigationBar = styled.nav`
   border-bottom: 1px solid #676767;
   background: #FFF;
 
-  @media (max-width: 768px) {
+  @media (max-width: 896px) {
     padding: 0px 20px;
     height: 50px;
   }
@@ -81,7 +81,7 @@ export const LogoContainer = styled.div`
 export const Logo = styled.img`
   width: 170px;
 
-  @media (max-width:430px){
+  @media (max-width: 896px){
     width: 130px;
   }
 `;
@@ -89,7 +89,7 @@ export const Logo = styled.img`
 export const NavButtonsContainer = styled.div`
   display: flex;
 
-  @media (max-width: 768px) {
+  @media (max-width: 896px) {
     display: none;
   }
 `;
@@ -99,7 +99,7 @@ export const SectionButtons = styled.div`
   margin-right: 24px;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 896px) {
     flex-direction: column;
     margin-right: 0px;
     gap: 30px;
@@ -187,8 +187,9 @@ export const ContainerHeroSection = styled.div`
   background: var(--White, #fff);
   justify-content: space-between;
 
-  @media (max-width: 430px) {
+  @media (max-width: 896px) {
     flex-direction: column;
+    gap: 8px;
   }
 `;
 
