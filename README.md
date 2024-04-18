@@ -1,5 +1,4 @@
 # Nirvana Yoga LandingPage
-# Miles Journey 
 ![Static Badge](https://img.shields.io/badge/status-under_construction-yellow)
 ![Static Badge](https://img.shields.io/badge/React-green)
 
