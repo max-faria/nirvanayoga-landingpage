@@ -1,10 +1,12 @@
 # Nirvana Yoga LandingPage
 # Miles Journey 
-![Static Badge](https://img.shields.io/badge/status-finalized-success)
+![Static Badge](https://img.shields.io/badge/status-under_construction-yellow)
 ![Static Badge](https://img.shields.io/badge/React-green)
 
 
 Webpage for a yoga school using React and Styled Components
+
+Next steps: Responsiveness to Tablet devises and launch. 
 
 # Technologies used
 
