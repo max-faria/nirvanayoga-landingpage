@@ -3,7 +3,7 @@ import ToggleButtonPrice from "./components/ToggleButton";
 
 export const PricingSection: React.FC = () => {
   return (
-    <ContainerCenter>
+    <ContainerCenter id="pricing">
       <TitleSecondary>Pricing Plans</TitleSecondary>
         <ToggleButtonPrice />
     </ContainerCenter>

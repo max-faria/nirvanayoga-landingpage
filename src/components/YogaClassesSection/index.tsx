@@ -11,7 +11,7 @@ import YinPopupContent from "./ClassesCard/PopupContent/YinPopupContent";
 
 const YogaClasses = () => {
   return (
-    <ContainerCenter>
+    <ContainerCenter id="classes">
       <TitleSecondary>Yoga Classes For Every Level</TitleSecondary>
       <Subtitle>
         <p style={{ marginTop: "20px" }}>Find that one which suits you better</p>

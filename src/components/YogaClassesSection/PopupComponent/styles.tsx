@@ -1,7 +1,7 @@
 import styled, { css, keyframes } from "styled-components";
 
 interface AnimationInterface {
-  closing: boolean,
+  closing: boolean;
 }
 
 const fadeIn = keyframes`
@@ -40,10 +40,16 @@ export const Backdrop = styled.div<AnimationInterface>`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);  
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 5;
-  animation: ${props => props.closing ? css`${fadeOut} 0.2s ease-out forwards` : css`${fadeIn} 0.2s ease-out forwards`};
-
+  animation: ${(props) =>
+    props.closing
+      ? css`
+          ${fadeOut} 0.2s ease-out forwards
+        `
+      : css`
+          ${fadeIn} 0.2s ease-out forwards
+        `};
 `;
 
 export const PopupContainer = styled.div<AnimationInterface>`
@@ -52,16 +58,22 @@ export const PopupContainer = styled.div<AnimationInterface>`
   left: 50%;
   transform: translate(-50%, -50%);
   width: auto;
-  max-width: 90%; 
-  min-width: 300px; 
-  max-height: 80%; 
+  max-width: 90%;
+  min-width: 300px;
+  max-height: 80%;
   padding: 20px;
   background: white;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   z-index: 10;
-  animation: ${props => props.closing ? css`${scaleDown} 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards` : css`${scaleUp} 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards`}; 
+  animation: ${(props) =>
+    props.closing
+      ? css`
+          ${scaleDown} 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards
+        `
+      : css`
+          ${scaleUp} 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards
+        `};
   overflow-y: auto;
-  `;
-  
+`;

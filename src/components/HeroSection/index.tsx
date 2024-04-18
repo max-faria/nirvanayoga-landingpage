@@ -12,7 +12,7 @@ import HeroPhoto from "../../assets/hero-photo.png";
 
 const HeroSection = () => {
   return (
-    <ContainerHeroSection>
+    <ContainerHeroSection id="#">
       <TextHero>
         <Title>Join Our Yoga Classes</Title>
         <Subtitle>

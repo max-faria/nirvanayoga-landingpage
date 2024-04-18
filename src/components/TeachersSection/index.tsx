@@ -6,7 +6,7 @@ import YinTeacherCard from "./TeachersCard/YinTeacherCard";
 
 const TeachersSection = () => {
   return (
-    <ContainerCenter>
+    <ContainerCenter id="teachers">
       <TitleSecondary>Meet our teachers</TitleSecondary>
         <div style={{ paddingTop: '60px'}}>
       <ResponsiveCardContainer>

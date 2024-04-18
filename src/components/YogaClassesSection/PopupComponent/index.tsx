@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { Backdrop, PopupContainer } from "./styles";
 import { X } from "@phosphor-icons/react";
 
@@ -7,12 +7,25 @@ interface PopupComponentProps {
   content: React.ReactNode;
 }
 
+export const useLockBodyScroll = () => {
+  useLayoutEffect(() => {
+    // Guardar o valor original do overflow do body
+    const originalStyle = window.getComputedStyle(document.body).overflow;  
+    document.body.style.overflow = 'hidden';
+
+    // Reverter para o estilo original quando o componente for desmontado
+    return () => { document.body.style.overflow = originalStyle };
+  }, []); // Array vazio garante que o efeito só roda no montar e desmontar
+};
+
 const PopupComponent: React.FC<PopupComponentProps> = ({
   onClose,
   content,
 }) => {
   const [closing, setClosing] = useState(false)
   
+  useLockBodyScroll();
+
   const initiateClosing = () => {
     setTimeout(onClose, 200);
     setClosing(!closing)

@@ -1,36 +1,58 @@
-import styled from "styled-components";
+import styled  from "styled-components";
 
-interface MobileMenuInterface{
-  isOpen: boolean,
-}
+// interface MobileMenuInterface {
+//   isOpen: boolean;
+// }
+
+// const slideDown = keyframes`
+//   from {
+//     transform: translateY(-100%);
+   
+//   }
+//   to {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// `;
+
+// const slideUp = keyframes`
+//   from {
+//     transform: translateY(0);
+//     opacity: 1;
+   
+//   }
+//   to {
+//     transform: translateY(-100%);
+//   }
+// `;
 
 export const Container = styled.div`
   max-width: 1280px;
 `;
 
 export const MobileMenuIcon = styled.div`
-  display: none; /* Hidden on larger screens by default */
+  display: none;
 
   @media (max-width: 768px) {
-    display: block; /* Show hamburger icon on mobile devices */
+    display: block;
     cursor: pointer;
   }
 `;
 
-export const MobileMenu = styled.div<MobileMenuInterface>`
-  display: ${props => props.isOpen ? 'flex' : 'none'};
-  flex-direction: column;
-  position: absolute;
-  top: 72px; /* Directly below the navbar */
+export const MobileMenu = styled.div`
+  display: flex;
+  position: fixed;  // Isso garante que o menu não afete o layout dos outros elementos
+  top: 0; 
   left: 0;
+  justify-content: flex-start;
+  flex-direction: column;
   width: 100%;
-  background: white;
-  border-top: 1px solid var(--Kuno-Grey, #676767);
+  background: #FFF;
   z-index: 20;
-  gap: 8px;
+  gap: 30px;
   align-items: center;
+  height: 100vh;
 `;
-
 
 export const NavigationBar = styled.nav`
   display: flex;
@@ -39,10 +61,11 @@ export const NavigationBar = styled.nav`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #676767;
-  background: var(--White, #fff);
+  background: #FFF;
 
   @media (max-width: 768px) {
-    padding: 0 10px; /* Even smaller padding for mobile devices */
+    padding: 0px 20px;
+    height: 50px;
   }
 `;
 
@@ -57,44 +80,57 @@ export const LogoContainer = styled.div`
 
 export const Logo = styled.img`
   width: 170px;
+
+  @media (max-width:430px){
+    width: 130px;
+  }
 `;
 
 export const NavButtonsContainer = styled.div`
   display: flex;
 
   @media (max-width: 768px) {
-    display: none;  
+    display: none;
   }
 `;
 export const SectionButtons = styled.div`
   display: flex;
   gap: 16px;
   margin-right: 24px;
+  align-items: center;
 
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     flex-direction: column;
     margin-right: 0px;
-    gap: 6px;
+    gap: 30px;
     padding-top: 12px;
   }
+`;
+
+export const ButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-right: 0px;
+  gap: 24px;
+  padding-top: 12px;
+  margin-bottom: 16px;
+  width: 60%;
+
 `;
 
 export const LoginButtons = styled.div`
   display: flex;
   gap: 16px;
 
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
   }
 `;
 
 export const NavButton = styled.button`
-  display: flex;
   padding: 10px;
   align-items: flex-start;
-  gap: 10px;
-  color: var(--Black, #000);
   font-family: Roboto, sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -104,10 +140,15 @@ export const NavButton = styled.button`
   border: none;
   cursor: pointer;
 
-  @media (max-width: 768px){
+  a {
+    text-decoration: none;
+    color: var(--Black, #000);
+  }
+
+  @media (max-width: 768px) {
     padding: 0;
     justify-content: center;
-    font-size: 18px;
+    font-size: 22px;
   }
 `;
 
@@ -133,7 +174,7 @@ export const LoginButton = styled.button`
     color: #fff;
   }
 
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -146,9 +187,8 @@ export const ContainerHeroSection = styled.div`
   background: var(--White, #fff);
   justify-content: space-between;
 
-  @media (max-width: 430px){
+  @media (max-width: 430px) {
     flex-direction: column;
-    
   }
 `;
 
@@ -159,12 +199,13 @@ export const TextHero = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0px 60px;
-  gap: 15px;
+  
 
   @media (max-width: 430px) {
     padding: 16px;
+    align-items: center;
+    margin-top: 12px;
   }
-
 `;
 
 export const ImgContainer = styled.div`
@@ -172,20 +213,17 @@ export const ImgContainer = styled.div`
   justify-content: center;
 
   @media (max-width: 430px) {
-    width: 100%;        
-    max-width: 100vw;  
+    width: 100%;
+    max-width: 100vw;
     overflow: hidden;
-    
   }
 `;
-
-
 
 export const ImgHero = styled.img`
   flex: 1;
   height: 100%;
 
-  @media (max-width: 430px){
+  @media (max-width: 430px) {
     max-width: 100vh;
     overflow: hidden;
     height: auto;
@@ -198,9 +236,9 @@ export const ImgAboutUs = styled.img`
   padding-right: 64px;
 
   @media (max-width: 430px) {
-    width: 100%;    /* Scale to the width of its container */
+    width: 100%; /* Scale to the width of its container */
     height: auto;
-    padding-right:0;
+    padding-right: 0;
   }
 `;
 export const Title = styled.h1`
@@ -211,7 +249,7 @@ export const Title = styled.h1`
   font-weight: 700;
   line-height: 120%; /* 67.2px */
 
-  @media (max-width: 430px){
+  @media (max-width: 430px) {
     font-size: 40px;
     text-align: center;
     padding: 0px;
@@ -228,12 +266,12 @@ export const TitleSecondary = styled.h2`
   line-height: 120%; /* 67.2px */
 
   @media (max-width: 430px) {
-   font-size: 32px;
-   display: flex;
-   line-wrap: wrap;
-   margin: 0 12px;
-   justify-content: center;
-   text-align: center; 
+    font-size: 32px;
+    display: flex;
+    line-wrap: wrap;
+    margin: 0 12px;
+    justify-content: center;
+    text-align: center;
   }
 `;
 
@@ -245,9 +283,13 @@ export const Subtitle = styled.div`
   font-weight: 400;
   line-height: 150%;
   margin-bottom: 40px;
+  text-align: justify;
+  padding: 0 18px;
 
   @media (max-width: 430px) {
     font-size: 14px;
+    padding-bottom: 0;
+    margin: 16px 0;
   }
 `;
 

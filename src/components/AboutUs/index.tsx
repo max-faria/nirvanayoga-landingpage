@@ -11,7 +11,7 @@ import Posture from "../../assets/yogaposture.png";
 
 const AboutUs = () => {
   return (
-    <ContainerHeroSection>
+    <ContainerHeroSection id="about-us">
       <TextHero>
         <TitleSecondary>About us</TitleSecondary>
         <Subtitle>
